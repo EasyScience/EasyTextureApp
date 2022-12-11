@@ -17,6 +17,7 @@ QtObject {
     property bool step2PageEnabled: isDebugMode ? true : false
     property bool step3PageEnabled: isDebugMode ? true : false
     property bool step4PageEnabled: isDebugMode ? true : false
+    property bool step5PageEnabled: isDebugMode ? true : false
     property bool summaryPageEnabled: isDebugMode ? true : false
 
     // //////////////////////////
@@ -33,6 +34,7 @@ QtObject {
     property var step2TabButton
     property var step3TabButton
     property var step4TabButton
+    property var step5TabButton
     property var summaryTabButton
 
     // Charts
