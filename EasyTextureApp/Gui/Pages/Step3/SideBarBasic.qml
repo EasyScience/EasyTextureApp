@@ -12,21 +12,24 @@ EaComponents.SideBarColumn {
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Sub-step 1")
+        title: qsTr("Select gamma-Slice Width")
+        collapsed: false
 
         Loader { source: 'SideBarGroups/SubStep1.qml' }
     }
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Sub-step 2")
+        title: qsTr("Statistics")
+        collapsed: false
 
         Loader { source: 'SideBarGroups/SubStep2.qml' }
     }
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Sub-step 3")
+        title: qsTr("Select 2-theta Ring")
+        collapsed: false
         last: true
 
         Loader { source: 'SideBarGroups/SubStep3.qml' }

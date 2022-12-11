@@ -12,40 +12,31 @@ import easyApp.Gui.Logic 1.0 as EaLogic
 import Gui.Globals 1.0 as ExGlobals
 
 
-Grid {
-    columns: 2
-    columnSpacing: EaStyle.Sizes.fontPixelSize
+Row {
+    id: slideRow
 
-    Column {
-        EaElements.Label {
-            enabled: false
-            text: qsTr("Parameter E")
-        }
+    width: EaStyle.Sizes.sideBarContentWidth
+    height: 50 //parent.height
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(80.2)
-        }
-    }
+    spacing: 10
 
-    Column {
-        EaElements.Label {
-            enabled: false
-            text: qsTr("Parameter F")
-        }
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(13.145)
+
+    // Slider
+    EaElements.Slider {
+        id: slider
+        width: EaStyle.Sizes.sideBarContentWidth
+               - EaStyle.Sizes.fontPixelSize * 0.5
+        height: parent.height
+        from: 45
+        to: 135
+        value: 90
+        onPressedChanged: {
+
         }
     }
 
-    // Logic
-
-    function inputFieldWidth() {
-        return (EaStyle.Sizes.sideBarContentWidth - columnSpacing * (columns - 1)) / columns
-    }
 
 }
+
+

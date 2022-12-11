@@ -17,29 +17,93 @@ Grid {
     columnSpacing: EaStyle.Sizes.fontPixelSize
 
     Column {
+        width: 1/2 * EaStyle.Sizes.sideBarContentWidth
+
         EaElements.Label {
             enabled: false
-            text: qsTr("Parameter C")
+            text: qsTr("Current 2-theta Ring")
         }
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(80.2)
-        }
+        //Grid
+        Grid {
+            readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+            columns: 2
+            rowSpacing: 0
+            columnSpacing: commonSpacing
+
+            EaElements.Label {
+                font.bold: true
+                text: qsTr("Count Max:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
+
+            EaElements.Label {
+                visible: ExGlobals.Constants.proxy.project.currentProjectPath !== '--- EXAMPLE ---'
+                font.bold: true
+                text: qsTr("Count Min:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
+
+
+            EaElements.Label {
+                font.bold: true
+                text: qsTr("Count Sum:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
+
+        } // Grid
+
+
     }
 
     Column {
         EaElements.Label {
             enabled: false
-            text: qsTr("Parameter D")
+            text: qsTr("Total")
         }
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(13.145)
-        }
+        //Grid
+        Grid {
+            readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+            columns: 2
+            rowSpacing: 0
+            columnSpacing: commonSpacing
+
+            EaElements.Label {
+                font.bold: true
+                text: qsTr("Count Max:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
+
+            EaElements.Label {
+                visible: ExGlobals.Constants.proxy.project.currentProjectPath !== '--- EXAMPLE ---'
+                font.bold: true
+                text: qsTr("Count Min:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
+
+
+            EaElements.Label {
+                font.bold: true
+                text: qsTr("Count Sum:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
+
+        } // Grid close
     }
 
     // Logic
