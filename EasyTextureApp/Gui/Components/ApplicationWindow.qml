@@ -94,7 +94,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.homePageEnabled
             fontIcon: "home"
             text: qsTr("Home")
-            ToolTip.text: qsTr("Home page")
+            //ToolTip.text: qsTr("Home page")
             Component.onCompleted: ExGlobals.Variables.homeTabButton = this
         },
 
@@ -103,7 +103,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.projectPageEnabled
             fontIcon: "archive"
             text: qsTr("Project")
-            ToolTip.text: qsTr("Project description page")
+            //ToolTip.text: qsTr("Project description page")
             Component.onCompleted: ExGlobals.Variables.projectTabButton = this
         },
 
@@ -112,7 +112,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.step1PageEnabled
             fontIcon: "gem"
             text: qsTr("Step 1")
-            ToolTip.text: qsTr("Workflow step 1 description page")
+            //ToolTip.text: qsTr("Workflow step 1 description page")
             Component.onCompleted: ExGlobals.Variables.step1TabButton = this
         },
 
@@ -121,7 +121,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.step2PageEnabled
             fontIcon: "microscope"
             text: qsTr("Step 2")
-            ToolTip.text: qsTr("Workflow step 2 description page")
+            //ToolTip.text: qsTr("Workflow step 2 description page")
             Component.onCompleted: ExGlobals.Variables.step2TabButton = this
         },
 
@@ -130,7 +130,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.step3PageEnabled
             fontIcon: "calculator"
             text: qsTr("Step 3")
-            ToolTip.text: qsTr("Workflow step 3 description page")
+            //ToolTip.text: qsTr("Workflow step 3 description page")
             Component.onCompleted: ExGlobals.Variables.step3TabButton = this
         },
 
@@ -140,7 +140,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.summaryPageEnabled
             fontIcon: "clipboard-list"
             text: qsTr("Live View")
-            ToolTip.text: qsTr("Summary of the work done")
+            //ToolTip.text: qsTr("Summary of the work done")
             Component.onCompleted: ExGlobals.Variables.summaryTabButton = this
         }
 
