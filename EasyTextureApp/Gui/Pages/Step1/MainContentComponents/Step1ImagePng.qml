@@ -12,14 +12,7 @@ Rectangle {
         anchors.fill: parent
         anchors.margins: 20
         fillMode: Image.PreserveAspectFit
-        source: "Image1.png"
+        source: "d_spacing.png"
     }
 
-    Label {
-        anchors.centerIn: parent
-        font.pixelSize: 150
-        color: "orange"
-        opacity: 0.3
-        text: "screenshot"
-    }
 }

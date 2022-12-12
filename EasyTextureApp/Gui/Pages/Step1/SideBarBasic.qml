@@ -12,21 +12,25 @@ EaComponents.SideBarColumn {
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Sub-step 1")
+        title: qsTr("gamma-Slice Width")
+        collapsed: false
 
         Loader { source: 'SideBarGroups/SubStep1.qml' }
     }
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Sub-step 2")
+        title: qsTr("dSpacing Patterns")
+        collapsed: false
+
 
         Loader { source: 'SideBarGroups/SubStep2.qml' }
     }
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Sub-step 3")
+        title: qsTr("Export dSpacing Data")
+        collapsed: false
         last: true
 
         Loader { source: 'SideBarGroups/SubStep3.qml' }

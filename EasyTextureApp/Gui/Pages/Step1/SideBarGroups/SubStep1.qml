@@ -12,40 +12,50 @@ import easyApp.Gui.Logic 1.0 as EaLogic
 import Gui.Globals 1.0 as ExGlobals
 
 
+
 Grid {
-    columns: 2
-    columnSpacing: EaStyle.Sizes.fontPixelSize
+    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
 
-    Column {
-        EaElements.Label {
-            enabled: false
-            text: qsTr("Parameter A")
-        }
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(80.2)
+    rows: 2
+    rowSpacing: 30
+    columnSpacing: commonSpacing
+
+
+    Row{
+
+        Grid {
+            readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+
+            columns: 2
+            rowSpacing: 10
+            columnSpacing: commonSpacing
+
+            EaElements.Label {
+                //font.bold: true
+                text: qsTr("Selected gamma-Slice Width:")
+            }
+            EaElements.Label {
+                text: "xxx"
+            }
         }
     }
 
-    Column {
-        EaElements.Label {
-            enabled: false
-            text: qsTr("Parameter B")
-        }
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(13.145)
+
+
+
+    Row {
+
+        EaElements.SideBarButton {
+            width: EaStyle.Sizes.sideBarContentWidth
+            text: "Step Back to Change gamma-Slice Width"
+            onClicked: {}
         }
     }
 
-    // Logic
 
-    function inputFieldWidth() {
-        return (EaStyle.Sizes.sideBarContentWidth - columnSpacing * (columns - 1)) / columns
-    }
 
 }
+

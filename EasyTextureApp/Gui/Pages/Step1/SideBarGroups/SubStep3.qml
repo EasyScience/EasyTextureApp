@@ -13,32 +13,36 @@ import Gui.Globals 1.0 as ExGlobals
 
 
 Grid {
-    columns: 2
+    rows: 2
     columnSpacing: EaStyle.Sizes.fontPixelSize
+     rowSpacing: 30
 
-    Column {
-        EaElements.Label {
-            enabled: false
-            text: qsTr("Parameter E")
-        }
+    Row{
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(80.2)
+        Grid {
+            readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+
+            columns: 1
+
+            columnSpacing: commonSpacing
+
+            EaElements.Label {
+                text: qsTr("Save Set of d-Spacing Patterns")
+            }
+            EaElements.Label {
+                text: "in MAUD Format."
+            }
         }
     }
 
-    Column {
-        EaElements.Label {
-            enabled: false
-            text: qsTr("Parameter F")
-        }
 
-        EaElements.Parameter {
-            width: inputFieldWidth()
-            units: "%"
-            text: EaLogic.Utils.toFixed(13.145)
+    Row {
+
+        EaElements.SideBarButton {
+            width: EaStyle.Sizes.sideBarContentWidth
+            text: "Save"
+            onClicked: {}
         }
     }
 
