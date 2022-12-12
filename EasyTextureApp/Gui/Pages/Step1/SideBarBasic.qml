@@ -13,7 +13,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Vanadium Standard")
-        collapsed: false
+        collapsible: false
 
         Loader { source: 'SideBarGroups/SubStep1.qml' }
     }
@@ -21,7 +21,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Measurement File")
-        collapsed: false
+        collapsible: false
 
         Loader { source: 'SideBarGroups/SubStep2.qml' }
     }
@@ -29,7 +29,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Data Corection")
-        collapsed: false
+        collapsible: false
         last: true
 
         Loader { source: 'SideBarGroups/SubStep3.qml' }

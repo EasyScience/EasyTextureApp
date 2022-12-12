@@ -13,7 +13,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Select gamma-Slice Width")
-        collapsed: false
+        collapsible: false
 
         Loader { source: 'SideBarGroups/SubStep1.qml' }
     }
@@ -29,7 +29,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Select 2-theta Ring")
-        collapsed: false
+        collapsible: false
         last: true
 
         Loader { source: 'SideBarGroups/SubStep3.qml' }

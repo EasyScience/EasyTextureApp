@@ -21,7 +21,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("dSpacing Patterns")
-        collapsed: false
+        collapsible: false
 
 
         Loader { source: 'SideBarGroups/SubStep2.qml' }
@@ -30,7 +30,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Export dSpacing Data")
-        collapsed: false
+        collapsible: false
         last: true
 
         Loader { source: 'SideBarGroups/SubStep3.qml' }
