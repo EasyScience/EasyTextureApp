@@ -15,11 +15,4 @@ Rectangle {
         source: "2theta_ring+gamma_hist.png"
     }
 
-    Label {
-        anchors.centerIn: parent
-        font.pixelSize: 150
-        color: "orange"
-        opacity: 0.3
-        text: "screenshot"
-    }
 }
