@@ -20,6 +20,15 @@ EaComponents.SideBarColumn {
 
     // Sidebar Group
     EaElements.GroupBox {
+        title: qsTr("Statistics Related to gamma-Slice Width")
+        collapsed: false
+
+        Loader { source: 'SideBarGroups/SubStep1a.qml' }
+    }
+
+
+    // Sidebar Group
+    EaElements.GroupBox {
         title: qsTr("Statistics")
         collapsed: false
 
