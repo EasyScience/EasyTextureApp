@@ -16,11 +16,11 @@ import Gui.Globals 1.0 as ExGlobals
 import Gui.Components 1.0 as ExComponents
 import Gui.Pages.Home 1.0 as ExHomePage
 import Gui.Pages.Project 1.0 as ExProjectPage
-import Gui.Pages.Step1 1.0 as ExStep1
+import Gui.Pages.Step03 1.0 as ExStep1
 import Gui.Pages.Step2 1.0 as ExStep2
-import Gui.Pages.Step3 1.0 as ExStep3
+import Gui.Pages.Step02 1.0 as ExStep3
 import Gui.Pages.Step4 1.0 as ExStep4
-import Gui.Pages.Step5 1.0 as ExStep5
+import Gui.Pages.Step01 1.0 as ExStep5
 import Gui.Pages.Summary 1.0 as ExSummaryPage
 
 EaComponents.ApplicationWindow {
