@@ -19,8 +19,6 @@ import Gui.Pages.Project 1.0 as ExProjectPage
 import Gui.Pages.Step1 1.0 as ExStep1
 import Gui.Pages.Step2 1.0 as ExStep2
 import Gui.Pages.Step3 1.0 as ExStep3
-import Gui.Pages.Step4 1.0 as ExStep4
-import Gui.Pages.Step5 1.0 as ExStep5
 import Gui.Pages.Summary 1.0 as ExSummaryPage
 
 EaComponents.ApplicationWindow {
@@ -136,23 +134,6 @@ EaComponents.ApplicationWindow {
             Component.onCompleted: ExGlobals.Variables.step3TabButton = this
         },
 
-        // Step 4 tab
-        EaElements.AppBarTabButton {
-            enabled: ExGlobals.Variables.step4PageEnabled
-            fontIcon: "microscope"
-            text: qsTr("Step 4")
-            ToolTip.text: qsTr("Workflow step 4 description page")
-            Component.onCompleted: ExGlobals.Variables.step4TabButton = this
-        },
-
-        // Step 5 tab
-        EaElements.AppBarTabButton {
-            enabled: ExGlobals.Variables.step5PageEnabled
-            fontIcon: "microscope"
-            text: qsTr("Step 5")
-            ToolTip.text: qsTr("Workflow step 5 description page")
-            Component.onCompleted: ExGlobals.Variables.step5TabButton = this
-        },
 
         // Summary tab
         EaElements.AppBarTabButton {
@@ -279,61 +260,6 @@ EaComponents.ApplicationWindow {
                 items: [
                     ExStep3.SideBarBasic {},
                     ExStep3.SideBarAdvanced {}
-                ]
-            }
-        },
-
-
-
-        // Workflow step 4 (app page)
-        EaComponents.ContentPage {
-            mainContent: EaComponents.MainContent {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Plot view") }
-                ]
-
-                items: [
-                    ExStep4.MainContentPlotView {}
-                ]
-            }
-
-            sideBar: EaComponents.SideBar {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Basic controls") },
-                    EaElements.TabButton { text: qsTr("Advanced controls") }
-                ]
-
-                items: [
-                    ExStep4.SideBarBasic {},
-                    ExStep4.SideBarAdvanced {}
-                ]
-            }
-        },
-
-        // Workflow step 5 (app page)
-        EaComponents.ContentPage {
-            ///defaultInfo: ExGlobals.Constants.proxy.experiment.experimentLoaded ? "" : qsTr("No Experiments Loaded")
-
-            mainContent: EaComponents.MainContent {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Plot view") }
-                ]
-
-                items: [
-                    ExStep5.MainContentPlotView {}
-                ]
-
-            }
-
-            sideBar: EaComponents.SideBar {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Basic controls") },
-                    EaElements.TabButton { text: qsTr("Advanced controls") }
-                ]
-
-                items: [
-                    ExStep5.SideBarBasic {},
-                    ExStep5.SideBarAdvanced {}
                 ]
             }
         },
