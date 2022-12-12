@@ -1,3 +1,6 @@
 module MainContentComponents
 
+Step1ImagePng1 1.0 Step1ImagePng1.qml
+Step1ImagePng2 1.0 Step1ImagePng2.qml
+Step1ImagePng3 1.0 Step1ImagePng3.qml
 Step3ChartBokeh 1.0 Step3ChartBokeh.qml

@@ -8,5 +8,23 @@ import QtQuick.Controls 2.15
 import easyApp.Gui.Elements 1.0 as EaElements
 import easyApp.Gui.Components 1.0 as EaComponents
 
-EaComponents.SideBarColumn {}
+EaComponents.SideBarColumn {
+
+    // Sidebar Group
+    EaElements.GroupBox {
+        title: qsTr("3D View")
+        collapsed: false
+
+        width: 500
+        height: 500
+
+
+        Loader { source: 'SideBarGroups/AdvSubStep1.qml' }
+    }
+
+
+
+
+
+}
 

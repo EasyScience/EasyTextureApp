@@ -208,7 +208,7 @@ EaComponents.ApplicationWindow {
 
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Plot view") }
+                    EaElements.TabButton { text: qsTr("d-Spacing Patterns") }
                 ]
 
                 items: [
@@ -261,11 +261,15 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Plot view") }
+                    EaElements.TabButton { text: qsTr("2-theta Rings") },
+                    EaElements.TabButton { text: qsTr("2D View") },
+                    EaElements.TabButton { text: qsTr("3D View") }
                 ]
 
                 items: [
-                    ExStep3.MainContentPlotView {}
+                    ExStep3.MainContentPlotView {},
+                    ExStep3.MainContentPlotView2 {},
+                    ExStep3.MainContentPlotView3 {}
                 ]
             }
 
@@ -311,7 +315,7 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Plot view") }
+                    EaElements.TabButton { text: qsTr("Input Summary") }
                 ]
 
                 items: [
