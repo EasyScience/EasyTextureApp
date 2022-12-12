@@ -19,7 +19,7 @@ import Gui.Pages.Summary 1.0 as ExSummaryPage
 EaComponents.SideBarColumn {
 
     EaElements.GroupBox {
-        title: qsTr("Export report")
+        title: qsTr("Connect to Measurement Data")
         collapsible: false
         last: true
 
@@ -118,7 +118,7 @@ EaComponents.SideBarColumn {
         EaElements.SideBarButton {
             wide: true
             fontIcon: "download"
-            text: qsTr("Export")
+            text: qsTr("Connect")
 
             onClicked: {
                 if (reportFormatField.currentValue === 'html') {

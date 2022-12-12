@@ -19,7 +19,7 @@ import Gui.Pages.Project 1.0 as ExProjectPage
 import Gui.Pages.Step1 1.0 as ExStep1
 import Gui.Pages.Step2 1.0 as ExStep2
 import Gui.Pages.Step3 1.0 as ExStep3
-import Gui.Pages.Summary 1.0 as ExSummaryPage
+import Gui.Pages.Summary 1.0 as ExLiveViewPage
 
 EaComponents.ApplicationWindow {
 
@@ -135,11 +135,11 @@ EaComponents.ApplicationWindow {
         },
 
 
-        // Summary tab
+        // Live View tab
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.summaryPageEnabled
             fontIcon: "clipboard-list"
-            text: qsTr("Summary")
+            text: qsTr("Live View")
             ToolTip.text: qsTr("Summary of the work done")
             Component.onCompleted: ExGlobals.Variables.summaryTabButton = this
         }
@@ -266,15 +266,15 @@ EaComponents.ApplicationWindow {
 
 
 
-        // Summary (app page)
+        // Live View (app page)
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Report") }
+                    EaElements.TabButton { text: qsTr("Preview") }
                 ]
 
                 items: [
-                    ExSummaryPage.MainContentReport {}
+                    ExLiveViewPage.MainContentReport {}
                 ]
             }
 
@@ -285,8 +285,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExSummaryPage.SideBarBasic {},
-                    ExSummaryPage.SideBarAdvanced {}
+                    ExLiveViewPage.SideBarBasic {},
+                    ExLiveViewPage.SideBarAdvanced {}
                 ]
             }
         }
