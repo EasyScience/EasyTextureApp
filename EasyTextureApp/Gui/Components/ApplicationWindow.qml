@@ -16,9 +16,9 @@ import Gui.Globals 1.0 as ExGlobals
 import Gui.Components 1.0 as ExComponents
 import Gui.Pages.Home 1.0 as ExHomePage
 import Gui.Pages.Project 1.0 as ExProjectPage
-import Gui.Pages.Step03 1.0 as ExStep1
-import Gui.Pages.Step2 1.0 as ExStep2
 import Gui.Pages.Step02 1.0 as ExStep3
+import Gui.Pages.Step2 1.0 as ExStep2
+import Gui.Pages.Step03 1.0 as ExStep1
 import Gui.Pages.Step4 1.0 as ExStep4
 import Gui.Pages.Step01 1.0 as ExStep5
 import Gui.Pages.Summary 1.0 as ExSummaryPage
@@ -204,15 +204,13 @@ EaComponents.ApplicationWindow {
 
         // Workflow step 1 (app page)
         EaComponents.ContentPage {
-            ///defaultInfo: ExGlobals.Constants.proxy.phase.samplesPresent ? "" : qsTr("No Samples Added/Loaded")
-
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("d-Spacing Patterns") }
+                    EaElements.TabButton { text: qsTr("Input Summary") }
                 ]
 
                 items: [
-                    ExStep1.MainContentPlotView {}
+                    ExStep5.MainContentPlotView {}
                 ]
             }
 
@@ -223,41 +221,13 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep1.SideBarBasic {},
-                    ExStep1.SideBarAdvanced {}
+                    ExStep5.SideBarBasic {},
+                    ExStep5.SideBarAdvanced {}
                 ]
             }
         },
 
         // Workflow step 2 (app page)
-        EaComponents.ContentPage {
-            ///defaultInfo: ExGlobals.Constants.proxy.experiment.experimentLoaded ? "" : qsTr("No Experiments Loaded")
-
-            mainContent: EaComponents.MainContent {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Plot view") }
-                ]
-
-                items: [
-                    ExStep2.MainContentPlotView {}
-                ]
-
-            }
-
-            sideBar: EaComponents.SideBar {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Basic controls") },
-                    EaElements.TabButton { text: qsTr("Advanced controls") }
-                ]
-
-                items: [
-                    ExStep2.SideBarBasic {},
-                    ExStep2.SideBarAdvanced {}
-                ]
-            }
-        },
-
-        // Workflow step 3 (app page)
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
@@ -286,6 +256,35 @@ EaComponents.ApplicationWindow {
             }
         },
 
+        // Workflow step 3 (app page)
+        EaComponents.ContentPage {
+            ///defaultInfo: ExGlobals.Constants.proxy.phase.samplesPresent ? "" : qsTr("No Samples Added/Loaded")
+
+            mainContent: EaComponents.MainContent {
+                tabs: [
+                    EaElements.TabButton { text: qsTr("d-Spacing Patterns") }
+                ]
+
+                items: [
+                    ExStep1.MainContentPlotView {}
+                ]
+            }
+
+            sideBar: EaComponents.SideBar {
+                tabs: [
+                    EaElements.TabButton { text: qsTr("Basic controls") },
+                    EaElements.TabButton { text: qsTr("Advanced controls") }
+                ]
+
+                items: [
+                    ExStep1.SideBarBasic {},
+                    ExStep1.SideBarAdvanced {}
+                ]
+            }
+        },
+
+
+
         // Workflow step 4 (app page)
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
@@ -313,14 +312,17 @@ EaComponents.ApplicationWindow {
 
         // Workflow step 5 (app page)
         EaComponents.ContentPage {
+            ///defaultInfo: ExGlobals.Constants.proxy.experiment.experimentLoaded ? "" : qsTr("No Experiments Loaded")
+
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Input Summary") }
+                    EaElements.TabButton { text: qsTr("Plot view") }
                 ]
 
                 items: [
-                    ExStep5.MainContentPlotView {}
+                    ExStep2.MainContentPlotView {}
                 ]
+
             }
 
             sideBar: EaComponents.SideBar {
@@ -330,11 +332,14 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep5.SideBarBasic {},
-                    ExStep5.SideBarAdvanced {}
+                    ExStep2.SideBarBasic {},
+                    ExStep2.SideBarAdvanced {}
                 ]
             }
         },
+
+
+
         // Summary (app page)
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
