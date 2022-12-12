@@ -16,11 +16,11 @@ import Gui.Globals 1.0 as ExGlobals
 import Gui.Components 1.0 as ExComponents
 import Gui.Pages.Home 1.0 as ExHomePage
 import Gui.Pages.Project 1.0 as ExProjectPage
-import Gui.Pages.Step02 1.0 as ExStep3
-import Gui.Pages.Step2 1.0 as ExStep2
-import Gui.Pages.Step03 1.0 as ExStep1
+import Gui.Pages.Step02 1.0 as ExStep2
+import Gui.Pages.Step2 1.0 as ExStep5
+import Gui.Pages.Step03 1.0 as ExStep3
 import Gui.Pages.Step4 1.0 as ExStep4
-import Gui.Pages.Step01 1.0 as ExStep5
+import Gui.Pages.Step01 1.0 as ExStep1
 import Gui.Pages.Summary 1.0 as ExSummaryPage
 
 EaComponents.ApplicationWindow {
@@ -210,7 +210,7 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep5.MainContentPlotView {}
+                    ExStep1.MainContentPlotView {}
                 ]
             }
 
@@ -221,8 +221,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep5.SideBarBasic {},
-                    ExStep5.SideBarAdvanced {}
+                    ExStep1.SideBarBasic {},
+                    ExStep1.SideBarAdvanced {}
                 ]
             }
         },
@@ -237,9 +237,9 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep3.MainContentPlotView {},
-                    ExStep3.MainContentPlotView2 {},
-                    ExStep3.MainContentPlotView3 {}
+                    ExStep2.MainContentPlotView {},
+                    ExStep2.MainContentPlotView2 {},
+                    ExStep2.MainContentPlotView3 {}
                 ]
             }
 
@@ -250,8 +250,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep3.SideBarBasic {},
-                    ExStep3.SideBarAdvanced {}
+                    ExStep2.SideBarBasic {},
+                    ExStep2.SideBarAdvanced {}
                 ]
             }
         },
@@ -266,7 +266,7 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep1.MainContentPlotView {}
+                    ExStep3.MainContentPlotView {}
                 ]
             }
 
@@ -277,8 +277,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep1.SideBarBasic {},
-                    ExStep1.SideBarAdvanced {}
+                    ExStep3.SideBarBasic {},
+                    ExStep3.SideBarAdvanced {}
                 ]
             }
         },
@@ -320,7 +320,7 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep2.MainContentPlotView {}
+                    ExStep5.MainContentPlotView {}
                 ]
 
             }
@@ -332,8 +332,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep2.SideBarBasic {},
-                    ExStep2.SideBarAdvanced {}
+                    ExStep5.SideBarBasic {},
+                    ExStep5.SideBarAdvanced {}
                 ]
             }
         },
