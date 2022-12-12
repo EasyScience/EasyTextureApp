@@ -54,14 +54,6 @@ Grid {
         }
     }
 
-    Row {
-
-        EaElements.SideBarButton {
-            width: EaStyle.Sizes.sideBarContentWidth
-            text: "Select Vanadium File"
-            onClicked: {}
-        }
-    }
     // Logic
 
     function inputFieldWidth() {
