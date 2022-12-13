@@ -18,6 +18,62 @@ import Gui.Pages.Summary 1.0 as ExSummaryPage
 
 EaComponents.SideBarColumn {
 
+    // Sidebar Group
+    EaElements.GroupBox {
+        title: qsTr("Statistics")
+        collapsed: false
+
+
+
+        Grid {
+            columns: 2
+            columnSpacing: EaStyle.Sizes.fontPixelSize
+
+
+            Column {
+                //Grid
+                Grid {
+                    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+                    columns: 2
+                    rowSpacing: 0
+                    columnSpacing: commonSpacing
+
+
+                    EaElements.Label {
+                        text: qsTr("Current File Size:")
+                    }
+                    EaElements.Label {
+                        text: "xxx"
+                    }
+
+                    EaElements.Label {
+                        text: qsTr("Current Number of Events:")
+                    }
+                    EaElements.Label {
+                        text: "xxx"
+                    }
+
+
+                    EaElements.Label {
+                        text: qsTr("Average Count per Detector Voxel:")
+                    }
+                    EaElements.Label {
+                        text: "xxx"
+                    }
+
+                } // Grid
+
+
+            }
+
+
+        }
+
+
+    }
+
+
     EaElements.GroupBox {
         title: qsTr("Connect to Measurement Data")
         collapsible: false
