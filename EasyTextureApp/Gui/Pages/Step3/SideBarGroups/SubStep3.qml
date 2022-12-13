@@ -4,6 +4,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Dialogs 1.3 as QtQuickDialogs1
 
 import easyApp.Gui.Style 1.0 as EaStyle
 import easyApp.Gui.Elements 1.0 as EaElements
@@ -112,9 +113,8 @@ Grid {
             horizontalAlignment: TextInput.AlignLeft
 
             placeholderText: qsTr("Enter report location here")
-            text: ExGlobals.Constants.proxy.project.projectCreated ?
-                      EaLogic.Utils.urlToLocalFile(reportParentDirDialog.folder + '/' + reportNameField.text + '.' + reportFormatField.currentValue) :
-                      ''
+            text: //ExGlobals.Constants.proxy.project.projectCreated ?
+                  EaLogic.Utils.urlToLocalFile(reportParentDirDialog.folder + '/' + reportNameField.text + '.' + reportFormatField.currentValue)
 
             EaElements.ToolButton {
                 id: chooseButton
@@ -149,6 +149,17 @@ Grid {
 
 
 
+
+    // Directory dialog
+    QtQuickDialogs1.FileDialog {
+        id: reportParentDirDialog
+
+        title: qsTr("Choose report parent directory")
+        selectFolder: true
+        selectMultiple: false
+
+        ///folder: ExGlobals.Constants.proxy.project.currentProjectPath
+    }
 
 
     // Logic

@@ -4,6 +4,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Dialogs 1.3 as QtQuickDialogs1
 
 import easyApp.Gui.Style 1.0 as EaStyle
 import easyApp.Gui.Elements 1.0 as EaElements
@@ -37,7 +38,7 @@ Grid {
             horizontalAlignment: TextInput.AlignLeft
 
             placeholderText: qsTr("Enter measurement file here")
-            text: "y"
+            text: measurementFileDialog.fileUrl
 
             EaElements.ToolButton {
                 id: chooseButton
@@ -48,11 +49,23 @@ Grid {
                 fontIcon: "folder-open"
                 ToolTip.text: qsTr("Choose measurement file here")
 
-                onClicked: {}
+                onClicked: measurementFileDialog.open()
             }
         }
     }
 
+
+
+    // Measurement File dialog
+    QtQuickDialogs1.FileDialog {
+        id: measurementFileDialog
+
+        title: qsTr("Choose Measurement File")
+        selectFolder: false
+        selectMultiple: false
+
+        folder: ExGlobals.Constants.proxy.project.currentProjectPath
+    }
 
     // Logic
 

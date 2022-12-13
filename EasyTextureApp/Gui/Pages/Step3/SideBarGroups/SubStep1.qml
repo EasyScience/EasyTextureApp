@@ -51,7 +51,7 @@ Grid {
         EaElements.SideBarButton {
             width: EaStyle.Sizes.sideBarContentWidth
             text: "Step Back to Change gamma-Slice Width"
-            onClicked: {}
+            onClicked: ExGlobals.Variables.step2TabButton.toggle()
         }
     }
 
