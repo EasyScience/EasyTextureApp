@@ -93,7 +93,7 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.homePageEnabled
             fontIcon: "home"
-            text: qsTr("Home")
+            text: qsTr("   Home   ")
             //ToolTip.text: qsTr("Home page")
             Component.onCompleted: ExGlobals.Variables.homeTabButton = this
         },
@@ -111,7 +111,7 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step1PageEnabled
             fontIcon: "database"
-            text: qsTr("Measurement Data")
+            text: qsTr(" Measurement Data ")
             //ToolTip.text: qsTr("Workflow step 1 description page")
             Component.onCompleted: ExGlobals.Variables.step1TabButton = this
         },
@@ -140,7 +140,7 @@ EaComponents.ApplicationWindow {
             enabled: ExGlobals.Variables.summaryPageEnabled
             fontIcon: "satellite-dish"
             //fontIcon: "signal"
-            text: qsTr("Live View")
+            text: qsTr("   Live View   ")
             //ToolTip.text: qsTr("Summary of the work done")
             Component.onCompleted: ExGlobals.Variables.summaryTabButton = this
         }
