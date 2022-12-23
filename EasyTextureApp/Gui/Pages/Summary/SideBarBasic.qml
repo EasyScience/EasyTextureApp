@@ -18,61 +18,8 @@ import Gui.Pages.Summary 1.0 as ExSummaryPage
 
 EaComponents.SideBarColumn {
 
-    // Sidebar Group
-    EaElements.GroupBox {
-        title: qsTr("Statistics")
-        collapsed: false
-
-
-
-        Grid {
-            columns: 2
-            columnSpacing: EaStyle.Sizes.fontPixelSize
-
-
-            Column {
-                //Grid
-                Grid {
-                    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
-
-                    columns: 2
-                    rowSpacing: 0
-                    columnSpacing: commonSpacing
-
-
-                    EaElements.Label {
-                        text: qsTr("Current File Size:")
-                    }
-                    EaElements.Label {
-                        text: "xxx"
-                    }
-
-                    EaElements.Label {
-                        text: qsTr("Current Number of Events:")
-                    }
-                    EaElements.Label {
-                        text: "xxx"
-                    }
-
-
-                    EaElements.Label {
-                        text: qsTr("Average Count per Detector Voxel:")
-                    }
-                    EaElements.Label {
-                        text: "xxx"
-                    }
-
-                } // Grid
-
-
-            }
-
-
-        }
-
-
-    }
-
+    // create live view main content in sync with "Explore Page"
+    // implementation later, after "Explore" is finished
 
     EaElements.GroupBox {
         title: qsTr("Connect to Measurement Data")
@@ -101,10 +48,11 @@ EaComponents.SideBarColumn {
                     horizontalAlignment: TextInput.AlignLeft
                     placeholderText: qsTr("Enter report file name here")
 
-                    Component.onCompleted: text = 'report'
+                    Component.onCompleted: text = 'measurementFileFromInstrument'
                 }
             }
 
+            // todo: required?
             Row {
                 spacing: EaStyle.Sizes.fontPixelSize * 0.5
 
@@ -189,6 +137,63 @@ EaComponents.SideBarColumn {
 
         Component.onCompleted: ExGlobals.Variables.exportReportGroup = this
     }
+
+
+    // Sidebar Group
+    EaElements.GroupBox {
+        title: qsTr("Statistics")
+        collapsed: false
+
+
+
+        Grid {
+            columns: 2
+            columnSpacing: EaStyle.Sizes.fontPixelSize
+
+
+            Column {
+                //Grid
+                Grid {
+                    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+                    columns: 2
+                    rowSpacing: 0
+                    columnSpacing: commonSpacing
+
+
+                    EaElements.Label {
+                        text: qsTr("Current File Size:")
+                    }
+                    EaElements.Label {
+                        text: "xxx"
+                    }
+
+                    EaElements.Label {
+                        text: qsTr("Current Number of Events:")
+                    }
+                    EaElements.Label {
+                        text: "xxx"
+                    }
+
+
+                    EaElements.Label {
+                        text: qsTr("Average Count per Detector Voxel:")
+                    }
+                    EaElements.Label {
+                        text: "xxx"
+                    }
+
+                } // Grid
+
+
+            }
+
+
+        }
+
+
+    }
+
 
     // Directory dialog
     QtQuickDialogs1.FileDialog {
