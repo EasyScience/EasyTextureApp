@@ -13,46 +13,31 @@ import Gui.Globals 1.0 as ExGlobals
 
 
 Grid {
+    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
     columns: 2
-    columnSpacing: EaStyle.Sizes.fontPixelSize
+    rowSpacing: 0
+    columnSpacing: commonSpacing
 
-
-    Column {
-        //Grid
-        Grid {
-            readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
-
-            columns: 2
-            rowSpacing: 0
-            columnSpacing: commonSpacing
-
-
-            EaElements.Label {
-                text: qsTr("Number of Slices (= Number of Patterns):")
-            }
-            EaElements.Label {
-                text: "xxx"
-            }
-
-            EaElements.Label {
-                text: qsTr("Intensity Width (in gamma-Degree):")
-            }
-            EaElements.Label {
-                text: "xxx"
-            }
-
-
-            EaElements.Label {
-                text: qsTr("...:")
-            }
-            EaElements.Label {
-                text: "xxx"
-            }
-
-        } // Grid
-
-
+    EaElements.Label {
+        text: qsTr("Number of Slices (= Number of Patterns):")
+    }
+    EaElements.Label {
+        text: "xxx"
     }
 
+    EaElements.Label {
+        text: qsTr("Intensity Width (in gamma-Degree):")
+    }
+    EaElements.Label {
+        text: "xxx"
+    }
+
+    EaElements.Label {
+        text: qsTr("...:")
+    }
+    EaElements.Label {
+        text: "xxx"
+    }
 
 }
