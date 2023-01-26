@@ -367,7 +367,7 @@ EaComponents.ApplicationWindow {
         ExGlobals.Variables.appBarCentralTabs = appBarCentralTabs
 
         // DEBUG:
-        EaStyle.Sizes.defaultScale = parseInt("150%")
+        //EaStyle.Sizes.defaultScale = parseInt("150%")
     }
 
 }
