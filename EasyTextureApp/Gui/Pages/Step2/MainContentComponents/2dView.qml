@@ -4,8 +4,9 @@
 
 import QtQuick 2.15
 
-import Gui.Logic 1.0 as ExLogic
+import easyApp.Gui.Charts 1.0 as EaCharts
 
-Loader {
-    source: 'MainContentComponents/1dView.qml'
+EaCharts.Plotly2dHeatmap {
+    xAxisTitle: "New x-axis"
+    yAxisTitle: "New y-axis"
 }

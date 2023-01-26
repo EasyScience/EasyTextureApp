@@ -7,5 +7,5 @@ import QtQuick 2.15
 import Gui.Logic 1.0 as ExLogic
 
 Loader {
-    source: 'MainContentComponents/Step3ImagePng3.qml'
+    source: 'MainContentComponents/3dView.qml'
 }

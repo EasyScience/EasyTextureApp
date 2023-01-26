@@ -218,7 +218,7 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("2-theta Rings") },
+                    EaElements.TabButton { text: qsTr("2D+1D View") },
                     EaElements.TabButton { text: qsTr("2D View") },
                     EaElements.TabButton { text: qsTr("3D View") }
                 ]
