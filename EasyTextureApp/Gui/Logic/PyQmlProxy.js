@@ -26,7 +26,7 @@ class Plotting1d {
 
 
 class PyQmlProxy {
-    get project() { return {"projectInfoAsJson": { "name":"Example Project","parentDir":"","location":"Example Project","calculations":"experiments.cif","experiments":"experiments.cif","short_description":"texture, reduction","modified":"18.09.2020, 09:24","samples":"samples.cif"} } }
+    get project() { return {"currentProjectPath": "path/to/project", "projectInfoAsJson": { "name":"Example Project","parentDir":"","location":"Example Project","calculations":"experiments.cif","experiments":"experiments.cif","short_description":"texture, reduction","modified":"18.09.2020, 09:24","samples":"samples.cif"} } }
 
     get projectInfoAsJson() { return {"name":"Example Project","parentDir":"","location":"Example Project","calculations":"experiments.cif","experiments":"experiments.cif","short_description":"sine, cosine, lmfit, bumps","modified":"18.09.2020, 09:24","samples":"samples.cif"} }
     get projectExamplesAsXml() { return "<item><name>PbSO4</name><path>../Resources/Examples/PbSO4/project.json</path></item></root>" }
