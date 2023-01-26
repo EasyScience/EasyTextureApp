@@ -15,16 +15,8 @@ EaComponents.SideBarColumn {
         title: qsTr("3D View")
         collapsed: false
 
-        width: 500
-        height: 500
-
-
         Loader { source: 'SideBarGroups/AdvSubStep1.qml' }
     }
-
-
-
-
 
 }
 
