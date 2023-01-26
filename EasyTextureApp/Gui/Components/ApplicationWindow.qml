@@ -93,7 +93,7 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.homePageEnabled
             fontIcon: "home"
-            text: qsTr("   Home   ")
+            text: qsTr("Home")
             //ToolTip.text: qsTr("Home page")
             Component.onCompleted: ExGlobals.Variables.homeTabButton = this
         },
@@ -102,7 +102,7 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.projectPageEnabled
             fontIcon: "archive"
-            text: qsTr("   Project   ")
+            text: qsTr("Project")
             //ToolTip.text: qsTr("Project description page")
             Component.onCompleted: ExGlobals.Variables.projectTabButton = this
         },
@@ -111,7 +111,7 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step1PageEnabled
             fontIcon: "database"
-            text: qsTr(" Measurement Data ")
+            text: qsTr("Measurement Data")
             //ToolTip.text: qsTr("Workflow step 1 description page")
             Component.onCompleted: ExGlobals.Variables.step1TabButton = this
         },
@@ -120,7 +120,7 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step2PageEnabled
             fontIcon: "microscope"
-            text: qsTr("   Explore   ")
+            text: qsTr("Explore")
             //ToolTip.text: qsTr("Workflow step 2 description page")
             Component.onCompleted: ExGlobals.Variables.step2TabButton = this
         },
@@ -129,18 +129,23 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step3PageEnabled
             fontIcon: "calculator"
-            text: qsTr("   Results   ")
+            text: qsTr("Results")
             //ToolTip.text: qsTr("Workflow step 3 description page")
             Component.onCompleted: ExGlobals.Variables.step3TabButton = this
         },
 
+        // Toolbar separator
+        EaElements.AppBarTabButton {
+            enabled: false
+            text: "         "
+        },
 
         // Live View tab
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.summaryPageEnabled
             fontIcon: "satellite-dish"
             //fontIcon: "signal"
-            text: qsTr("   Live View   ")
+            text: qsTr("Live View")
             //ToolTip.text: qsTr("Summary of the work done")
             Component.onCompleted: ExGlobals.Variables.summaryTabButton = this
         }
@@ -265,6 +270,9 @@ EaComponents.ApplicationWindow {
             }
         },
 
+
+        // Toolbar separator
+        EaComponents.ContentPage {},
 
 
         // Live View (app page)
