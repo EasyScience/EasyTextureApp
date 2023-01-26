@@ -17,44 +17,33 @@ Grid {
     columnSpacing: EaStyle.Sizes.fontPixelSize
 
 
-    // RadioButton not working
-    EaElements.CheckBox {
+    // EasyApp RadioButton not working
+    RadioButton {
         topPadding: 0
-        checked: {}
-        text: qsTr("1°")
-        ToolTip.text: qsTr("") // qsTr("Select 1° slice")
-        onToggled: {}
+        checked: true
+        text: "1°"
+        ToolTip.text: qsTr("Select 1° slice")
     }
 
-    // RadioButton not working
-    EaElements.CheckBox {
+    // EasyApp RadioButton not working
+    RadioButton {
         topPadding: 0
-        checked: {}
-        text: qsTr("2°")
-        ToolTip.text: qsTr("") // qsTr("Select 2° slice")
-        onToggled: {}
+        text: "2°"
+        ToolTip.text: qsTr("Select 2° slice")
     }
 
-    // RadioButton not working
-    EaElements.CheckBox {
+    // EasyApp RadioButton not working
+    RadioButton {
         topPadding: 0
-        checked: {}
-        text: qsTr("5°")
-        ToolTip.text: qsTr("") // qsTr("Select 5° slice")
-        onToggled: {}
+        text: "5°"
+        ToolTip.text: qsTr("Select 5° slice")
     }
 
-    // RadioButton not working
-    EaElements.CheckBox {
+    // EasyApp RadioButton not working
+    RadioButton {
         topPadding: 0
-        checked: {}
-        text: qsTr("10°")
-        ToolTip.text: qsTr("") // qsTr("Select 10° slice")
-        onToggled: {}
+        text: "10°"
+        ToolTip.text: qsTr("Select 10° slice")
     }
-
-
-
-
 
 }

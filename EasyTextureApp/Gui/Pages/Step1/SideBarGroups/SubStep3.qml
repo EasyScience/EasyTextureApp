@@ -16,35 +16,19 @@ Grid {
     rows: 2
     rowSpacing: EaStyle.Sizes.fontPixelSize
 
-    Row {
-        // RadioButton not working
-        EaElements.CheckBox {
-            topPadding: 0
-            checked: {}
-            text: qsTr("Apply data correction")
-            ToolTip.text: qsTr("") // qsTr("Checking this box will apply data correction to the measurement data")
-            onToggled: {}
-        }
+    // EasyApp RadioButton not working
+    RadioButton {
+        topPadding: 0
+        checked: true
+        text: qsTr("Apply data correction")
+        ToolTip.text: qsTr("Checking this box will apply data correction to the measurement data")
     }
 
-    Row {
-        EaElements.CheckBox {
-            topPadding: 0
-            checked: {}
-            text: qsTr("Use raw data without correction")
-            ToolTip.text: qsTr("") // qsTr("Checking this box will continue without applying data correction to the measurement data")
-            onToggled: {}
-        }
-
-    }
-
-
-
-
-    // Logic
-
-    function inputFieldWidth() {
-        return (EaStyle.Sizes.sideBarContentWidth - columnSpacing * (columns - 1)) / columns
+    // EasyApp RadioButton not working
+    RadioButton {
+        topPadding: 0
+        text: qsTr("Use raw data without correction")
+        ToolTip.text: qsTr("Checking this box will continue without applying data correction to the measurement data")
     }
 
 }
