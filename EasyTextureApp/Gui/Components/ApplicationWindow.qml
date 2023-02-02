@@ -19,7 +19,6 @@ import Gui.Pages.Project 1.0 as ExProjectPage
 import Gui.Pages.Step1 1.0 as ExStep1
 import Gui.Pages.Step2 1.0 as ExStep2
 import Gui.Pages.Step3 1.0 as ExStep3
-import Gui.Pages.Summary 1.0 as ExLiveViewPage
 
 EaComponents.ApplicationWindow {
 
@@ -132,22 +131,6 @@ EaComponents.ApplicationWindow {
             text: qsTr("Results")
             //ToolTip.text: qsTr("Workflow step 3 description page")
             Component.onCompleted: ExGlobals.Variables.step3TabButton = this
-        },
-
-        // Toolbar separator
-        EaElements.AppBarTabButton {
-            enabled: false
-            text: "         "
-        },
-
-        // Live View tab
-        EaElements.AppBarTabButton {
-            enabled: ExGlobals.Variables.summaryPageEnabled
-            fontIcon: "satellite-dish"
-            //fontIcon: "signal"
-            text: qsTr("Live View")
-            //ToolTip.text: qsTr("Summary of the work done")
-            Component.onCompleted: ExGlobals.Variables.summaryTabButton = this
         }
 
     ]
@@ -268,37 +251,8 @@ EaComponents.ApplicationWindow {
                     ExStep3.SideBarAdvanced {}
                 ]
             }
-        },
-
-
-        // Toolbar separator
-        EaComponents.ContentPage {},
-
-
-        // Live View (app page)
-        EaComponents.ContentPage {
-            mainContent: EaComponents.MainContent {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Preview") }
-                ]
-
-                items: [
-                    ExLiveViewPage.MainContentReport {}
-                ]
-            }
-
-            sideBar: EaComponents.SideBar {
-                tabs: [
-                    EaElements.TabButton { text: qsTr("Basic controls") },
-                    EaElements.TabButton { text: qsTr("Advanced controls") }
-                ]
-
-                items: [
-                    ExLiveViewPage.SideBarBasic {},
-                    ExLiveViewPage.SideBarAdvanced {}
-                ]
-            }
         }
+
     ]
 
     /////////////
