@@ -31,6 +31,7 @@ QtObject {
     property var homeTabButton
     property var projectTabButton
     property var step1TabButton
+    property var step1aTabButton
     property var step2TabButton
     property var step3TabButton
     property var step4TabButton

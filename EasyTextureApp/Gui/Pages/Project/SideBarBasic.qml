@@ -43,7 +43,7 @@ EaComponents.SideBarColumn {
             }
 
             EaElements.SideBarButton {
-                enabled: false
+                //enabled: false
                 fontIcon: "upload"
                 text: qsTr("Open an existing project")
 
@@ -74,7 +74,7 @@ EaComponents.SideBarColumn {
     }
 
     EaElements.GroupBox {
-        title: qsTr("Examples")
+        title: qsTr("Recent Projects")
         last: true
 
         Loader { source: 'SideBarGroups/ProjectExamples.qml' }

@@ -17,6 +17,7 @@ import Gui.Components 1.0 as ExComponents
 import Gui.Pages.Home 1.0 as ExHomePage
 import Gui.Pages.Project 1.0 as ExProjectPage
 import Gui.Pages.Step1 1.0 as ExStep1
+import Gui.Pages.Step1a 1.0 as ExStep1a
 import Gui.Pages.Step2 1.0 as ExStep2
 import Gui.Pages.Step3 1.0 as ExStep3
 
@@ -110,10 +111,20 @@ EaComponents.ApplicationWindow {
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step1PageEnabled
             fontIcon: "database"
-            text: qsTr("Measurement Data")
+            text: qsTr("Raw Data")
             //ToolTip.text: qsTr("Workflow step 1 description page")
             Component.onCompleted: ExGlobals.Variables.step1TabButton = this
         },
+
+        // Step 1a tab
+        EaElements.AppBarTabButton {
+            enabled: ExGlobals.Variables.step1PageEnabled
+            fontIcon: "hammer"
+            text: qsTr("Corrections")
+            //ToolTip.text: qsTr("Workflow step 1a description page")
+            Component.onCompleted: ExGlobals.Variables.stepa1TabButton = this
+        },
+
 
         // Step 2 tab
         EaElements.AppBarTabButton {
@@ -176,7 +187,7 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Input Summary") }
+                    EaElements.TabButton { text: qsTr("Measurement Preview") }
                 ]
 
                 items: [
@@ -193,6 +204,30 @@ EaComponents.ApplicationWindow {
                 items: [
                     ExStep1.SideBarBasic {},
                     ExStep1.SideBarAdvanced {}
+                ]
+            }
+        },
+
+
+        // Workflow step 1a (app page)
+        EaComponents.ContentPage {
+            mainContent: EaComponents.MainContent {
+                tabs: [
+                    EaElements.TabButton { text: qsTr("xxx") }
+                ]
+
+                items: [
+                    ExStep1a.MainContentPlotView {}
+                ]
+            }
+
+            sideBar: EaComponents.SideBar {
+                tabs: [
+                    EaElements.TabButton { text: qsTr("Basic controls") }
+                ]
+
+                items: [
+                    ExStep1a.SideBarBasic {}
                 ]
             }
         },
@@ -232,11 +267,13 @@ EaComponents.ApplicationWindow {
 
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("d-Spacing Patterns") }
+                    EaElements.TabButton { text: qsTr("d-Spacing Patterns") },
+                    EaElements.TabButton { text: qsTr("2-theta Patterns") }
                 ]
 
                 items: [
-                    ExStep3.MainContentPlotView {}
+                    ExStep3.MainContentPlotView {},
+                    ExStep3.MainContentPlotView2 {}
                 ]
             }
 
