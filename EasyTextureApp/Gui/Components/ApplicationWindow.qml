@@ -19,7 +19,7 @@ import Gui.Pages.Project 1.0 as ExProjectPage
 import Gui.Pages.RawData 1.0 as ExRawDataPage
 import Gui.Pages.Corrections 1.0 as ExCorrectionsPage
 import Gui.Pages.Explore 1.0 as ExExplorePage
-import Gui.Pages.Step3 1.0 as ExStep3
+import Gui.Pages.Results 1.0 as ExResultsPage
 
 EaComponents.ApplicationWindow {
 
@@ -272,8 +272,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep3.MainContentPlotView {},
-                    ExStep3.MainContentPlotView2 {}
+                    ExResultsPage.MainContentPlotView {},
+                    ExResultsPage.MainContentPlotView2 {}
                 ]
             }
 
@@ -284,8 +284,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep3.SideBarBasic {},
-                    ExStep3.SideBarAdvanced {}
+                    ExResultsPage.SideBarBasic {},
+                    ExResultsPage.SideBarAdvanced {}
                 ]
             }
         }
