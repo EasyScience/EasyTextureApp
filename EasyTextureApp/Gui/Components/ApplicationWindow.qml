@@ -20,6 +20,7 @@ import Gui.Pages.RawData 1.0 as ExRawDataPage
 import Gui.Pages.Corrections 1.0 as ExCorrectionsPage
 import Gui.Pages.Explore 1.0 as ExExplorePage
 import Gui.Pages.Results 1.0 as ExResultsPage
+import Gui.Pages.LiveView 1.0 as ExLiveViewPage
 
 EaComponents.ApplicationWindow {
 
@@ -107,7 +108,7 @@ EaComponents.ApplicationWindow {
             Component.onCompleted: ExGlobals.Variables.projectTabButton = this
         },
 
-        // Step 1 tab
+        // RawData tab
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step1PageEnabled
             fontIcon: "database"
@@ -116,7 +117,7 @@ EaComponents.ApplicationWindow {
             Component.onCompleted: ExGlobals.Variables.step1TabButton = this
         },
 
-        // Step 1a tab
+        // Corrections tab
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step1PageEnabled
             fontIcon: "hammer"
@@ -126,7 +127,7 @@ EaComponents.ApplicationWindow {
         },
 
 
-        // Step 2 tab
+        // Explore tab
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step2PageEnabled
             fontIcon: "microscope"
@@ -135,13 +136,29 @@ EaComponents.ApplicationWindow {
             Component.onCompleted: ExGlobals.Variables.step2TabButton = this
         },
 
-        // Step 3 tab
+        // Results tab
         EaElements.AppBarTabButton {
             enabled: ExGlobals.Variables.step3PageEnabled
             fontIcon: "calculator"
             text: qsTr("Results")
             //ToolTip.text: qsTr("Workflow step 3 description page")
             Component.onCompleted: ExGlobals.Variables.step3TabButton = this
+        },
+
+        // Toolbar separator
+        EaElements.AppBarTabButton {
+            enabled: false
+            text: "         "
+        },
+
+        // Live View tab
+        EaElements.AppBarTabButton {
+            enabled: ExGlobals.Variables.summaryPageEnabled
+            fontIcon: "satellite-dish"
+            //fontIcon: "signal"
+            text: qsTr("Live View")
+            //ToolTip.text: qsTr("Summary of the work done")
+            Component.onCompleted: ExGlobals.Variables.summaryTabButton = this
         }
 
     ]
@@ -232,7 +249,7 @@ EaComponents.ApplicationWindow {
             }
         },
 
-        // Workflow step 2 (app page)
+        // Workflow step: Explore
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
@@ -261,7 +278,8 @@ EaComponents.ApplicationWindow {
             }
         },
 
-        // Workflow step 3 (app page)
+
+        // Workflow step: Results
         EaComponents.ContentPage {
             ///defaultInfo: ExGlobals.Constants.proxy.phase.samplesPresent ? "" : qsTr("No Samples Added/Loaded")
 
@@ -286,6 +304,36 @@ EaComponents.ApplicationWindow {
                 items: [
                     ExResultsPage.SideBarBasic {},
                     ExResultsPage.SideBarAdvanced {}
+                ]
+            }
+        },
+
+
+        // Toolbar separator
+        EaComponents.ContentPage {},
+
+
+        // Workflow Step: Live View
+        EaComponents.ContentPage {
+            mainContent: EaComponents.MainContent {
+                tabs: [
+                    EaElements.TabButton { text: qsTr("Preview") }
+                ]
+
+                items: [
+                    ExLiveViewPage.MainContentReport {}
+                ]
+            }
+
+            sideBar: EaComponents.SideBar {
+                tabs: [
+                    EaElements.TabButton { text: qsTr("Basic controls") },
+                    EaElements.TabButton { text: qsTr("Advanced controls") }
+                ]
+
+                items: [
+                    ExLiveViewPage.SideBarBasic {},
+                    ExLiveViewPage.SideBarAdvanced {}
                 ]
             }
         }
