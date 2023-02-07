@@ -13,7 +13,7 @@ EaComponents.SideBarColumn {
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("gamma-Slice Width")
-        collapsed: false
+        collapsible: false
 
         Loader { source: 'SideBarGroups/SubStep1.qml' }
     }

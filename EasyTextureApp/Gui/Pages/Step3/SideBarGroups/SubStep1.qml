@@ -12,50 +12,44 @@ import easyApp.Gui.Logic 1.0 as EaLogic
 import Gui.Globals 1.0 as ExGlobals
 
 
-
 Grid {
-    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+    columns: 4
+    columnSpacing: EaStyle.Sizes.fontPixelSize
 
 
-    rows: 2
-    rowSpacing: 30
-    columnSpacing: commonSpacing
-
-
-    Row{
-
-        Grid {
-            readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
-
-
-            columns: 2
-            rowSpacing: 10
-            columnSpacing: commonSpacing
-
-            EaElements.Label {
-                //font.bold: true
-                text: qsTr("Selected gamma-Slice Width:")
-            }
-            EaElements.Label {
-                text: "xxx"
-            }
-        }
+    // EasyApp RadioButton not working
+    RadioButton {
+        topPadding: 0
+        checked: true
+        text: "1°"
+        ToolTip.text: qsTr("Select 1° slice")
     }
 
-
-
-
-
-    Row {
-
-        EaElements.SideBarButton {
-            width: EaStyle.Sizes.sideBarContentWidth
-            text: "Step Back to Change gamma-Slice Width"
-            onClicked: ExGlobals.Variables.step2TabButton.toggle()
-        }
+    // EasyApp RadioButton not working
+    RadioButton {
+        topPadding: 0
+        text: "2°"
+        ToolTip.text: qsTr("Select 2° slice")
     }
 
+    // EasyApp RadioButton not working
+    RadioButton {
+        topPadding: 0
+        text: "5°"
+        ToolTip.text: qsTr("Select 5° slice")
+    }
 
+    // EasyApp RadioButton not working
+    RadioButton {
+        topPadding: 0
+        text: "10°"
+        ToolTip.text: qsTr("Select 10° slice")
+    }
 
 }
+
+
+
+
+
 
