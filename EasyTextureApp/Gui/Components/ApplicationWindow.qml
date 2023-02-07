@@ -16,7 +16,7 @@ import Gui.Globals 1.0 as ExGlobals
 import Gui.Components 1.0 as ExComponents
 import Gui.Pages.Home 1.0 as ExHomePage
 import Gui.Pages.Project 1.0 as ExProjectPage
-import Gui.Pages.Step1 1.0 as ExStep1
+import Gui.Pages.RawData 1.0 as ExRawDataPage
 import Gui.Pages.Step1a 1.0 as ExStep1a
 import Gui.Pages.Step2 1.0 as ExStep2
 import Gui.Pages.Step3 1.0 as ExStep3
@@ -183,7 +183,7 @@ EaComponents.ApplicationWindow {
             }
         },
 
-        // Workflow step 1 (app page)
+        // Workflow step: raw data
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
@@ -191,7 +191,7 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep1.MainContentPlotView {}
+                    ExRawDataPage.MainContentPlotView {}
                 ]
             }
 
@@ -202,8 +202,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExStep1.SideBarBasic {},
-                    ExStep1.SideBarAdvanced {}
+                    ExRawDataPage.SideBarBasic {},
+                    ExRawDataPage.SideBarAdvanced {}
                 ]
             }
         },
