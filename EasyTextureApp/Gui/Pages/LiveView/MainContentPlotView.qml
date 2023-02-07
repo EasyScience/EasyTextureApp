@@ -4,4 +4,8 @@
 
 import QtQuick 2.15
 
-Item {}
+import Gui.Logic 1.0 as ExLogic
+
+Loader {
+    source: 'MainContentComponents/LiveView_ImagePng1.qml'
+}

@@ -21,6 +21,8 @@ EaComponents.SideBarColumn {
     // create live view main content in sync with "Explore Page"
     // implementation later, after "Explore" is finished
 
+
+
     EaElements.GroupBox {
         title: qsTr("Connect to Measurement Data")
         collapsible: false
@@ -193,6 +195,103 @@ EaComponents.SideBarColumn {
 
 
     }
+
+
+
+    EaElements.GroupBox {
+        title: qsTr("Explore Detector 3D Preview")
+        collapsible: false
+        last: true
+
+
+        // Export button
+        EaElements.SideBarButton {
+            wide: true
+            fontIcon: "" //"download"
+            text: qsTr("Select Detector 3D Preview Tab")
+
+            onClicked: {} // switch to detector 3D preview
+
+
+            Component.onCompleted: ExGlobals.Variables.exportReportButton = this
+        }
+
+
+
+
+    }
+
+
+    EaElements.GroupBox {
+        title: qsTr("Explore 2-theta Rings Preview")
+        collapsible: false
+        last: true
+
+
+        Grid{
+            rows: 2
+            rowSpacing: 30
+
+            Row {
+
+                Grid {
+                    readonly property int commonSpacing: EaStyle.Sizes.fontPixelSize * 1.5
+
+
+                    columns: 2
+                    rowSpacing: 10
+                    //columnSpacing: commonSpacing
+
+                    EaElements.Label {
+                        //font.bold: true
+                        text: qsTr("2-theta = ")
+                    }
+                    EaElements.Label {
+                        text: slider.value.toFixed(0) // TODO: putthis info on the TAB
+                    }
+                }
+
+            }
+
+            Row {
+                id: slideRow
+
+                width: EaStyle.Sizes.sideBarContentWidth
+                height: 50 //parent.height
+
+                spacing: 10
+
+
+                EaElements.Label {
+                    id: sliderFromLabel
+                    text: slider.from.toFixed(0)
+                }
+
+                // Slider
+                EaElements.Slider {
+                    id: slider
+                    width: EaStyle.Sizes.sideBarContentWidth
+                           - EaStyle.Sizes.fontPixelSize * 0.5 - 100
+                    height: parent.height
+                    from: 45
+                    to: 135
+                    value: 90
+                    // TODO: tool tip: make it an int (not double)
+                    onPressedChanged: {
+
+                    }
+                }
+
+                EaElements.Label {
+                    id: sliderToLabel
+                    text: slider.to.toFixed(0)
+                }
+
+            }
+
+        }
+    }
+
 
 
     // Directory dialog

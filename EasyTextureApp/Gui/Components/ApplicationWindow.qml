@@ -317,11 +317,13 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Preview") }
+                    EaElements.TabButton { text: qsTr("Preview: Detector 3D") },
+                    EaElements.TabButton { text: qsTr("Preview: 2-theta Rings") }
                 ]
 
                 items: [
-                    ExLiveViewPage.MainContentReport {}
+                    ExLiveViewPage.MainContentPlotView {},
+                    ExLiveViewPage.MainContentPlotView2 {}
                 ]
             }
 
