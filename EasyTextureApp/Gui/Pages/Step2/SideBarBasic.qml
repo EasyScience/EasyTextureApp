@@ -10,6 +10,27 @@ import easyApp.Gui.Components 1.0 as EaComponents
 
 EaComponents.SideBarColumn {
 
+
+    // Sidebar Group
+    EaElements.GroupBox {
+        title: qsTr("Select 2-theta Ring")
+        collapsible: false
+        last: true
+
+        Loader { source: 'SideBarGroups/SubStep3.qml' }
+    }
+
+    // Sidebar Group
+    EaElements.GroupBox {
+        title: qsTr("Statistics")
+        collapsed: false
+
+        Loader { source: 'SideBarGroups/SubStep2.qml' }
+    }
+
+
+
+
     // Sidebar Group
     EaElements.GroupBox {
         title: qsTr("Select gamma-Slice Width")
@@ -25,24 +46,5 @@ EaComponents.SideBarColumn {
 
         Loader { source: 'SideBarGroups/SubStep1a.qml' }
     }
-
-
-    // Sidebar Group
-    EaElements.GroupBox {
-        title: qsTr("Statistics")
-        collapsed: false
-
-        Loader { source: 'SideBarGroups/SubStep2.qml' }
-    }
-
-    // Sidebar Group
-    EaElements.GroupBox {
-        title: qsTr("Select 2-theta Ring")
-        collapsible: false
-        last: true
-
-        Loader { source: 'SideBarGroups/SubStep3.qml' }
-    }
-
 }
 
