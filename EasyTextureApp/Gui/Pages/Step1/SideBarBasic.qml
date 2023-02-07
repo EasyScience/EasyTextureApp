@@ -12,28 +12,12 @@ EaComponents.SideBarColumn {
 
     // Sidebar Group
     EaElements.GroupBox {
-        title: qsTr("Vanadium Standard")
-        collapsible: false
-
-        Loader { source: 'SideBarGroups/SubStep1.qml' }
-    }
-
-    // Sidebar Group
-    EaElements.GroupBox {
         title: qsTr("Measurement File")
         collapsible: false
 
         Loader { source: 'SideBarGroups/SubStep2.qml' }
     }
 
-    // Sidebar Group
-    EaElements.GroupBox {
-        title: qsTr("Data Corection")
-        collapsible: false
-        last: true
-
-        Loader { source: 'SideBarGroups/SubStep3.qml' }
-    }
 
 }
 
