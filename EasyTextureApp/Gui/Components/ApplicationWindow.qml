@@ -204,7 +204,7 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("Measurement Preview") }
+                    EaElements.TabButton { text: qsTr("Preview: Detector 3D") }
                 ]
 
                 items: [
@@ -230,7 +230,7 @@ EaComponents.ApplicationWindow {
         EaComponents.ContentPage {
             mainContent: EaComponents.MainContent {
                 tabs: [
-                    EaElements.TabButton { text: qsTr("xxx") }
+                    EaElements.TabButton { text: qsTr("Preview: Detector 3D") }
                 ]
 
                 items: [

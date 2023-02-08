@@ -123,7 +123,7 @@ EaComponents.SideBarColumn {
         // Export button
         EaElements.SideBarButton {
             wide: true
-            fontIcon: "download"
+            fontIcon: "network-wired" // "handshake"  "network-wired"  "satellite-dish"   "lock"/"unlock"
             text: qsTr("Connect")
 
             onClicked: {
