@@ -1,8 +1,8 @@
 module SideBarGroups
 
-SubStep1 1.0 SubStep1.qml
-SubStep1a 1.0 SubStep1a.qml
+SubStep1 1.0 SubStep1x.qml
 SubStep2 1.0 SubStep2.qml
-SubStep3 1.0 SubStep3.qml
+SubStep3 1.0 SubStep3x.qml
+SubStep4 1.0 SubStep4x.qml
 
 AdvSubStep1 1.0 AdvSubStep1.qml
