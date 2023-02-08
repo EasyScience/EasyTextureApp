@@ -234,7 +234,7 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExCorrectionsPage.MainContentPlotView {}
+                    ExCorrectionsPage.MainContentTab {}
                 ]
             }
 
