@@ -17,7 +17,7 @@ EaComponents.SideBarColumn {
         collapsible: false
         last: true
 
-        Loader { source: 'SideBarGroups/SubStep1x.qml' }
+        Loader { source: 'SideBarGroups/SubStep1.qml' }
     }
 
     // Sidebar Group
@@ -36,7 +36,7 @@ EaComponents.SideBarColumn {
         title: qsTr("Select gamma-Slice Width")
         collapsible: false
 
-        Loader { source: 'SideBarGroups/SubStep3x.qml' }
+        Loader { source: 'SideBarGroups/SubStep3.qml' }
     }
 
     // Sidebar Group
@@ -44,7 +44,7 @@ EaComponents.SideBarColumn {
         title: qsTr("Statistics Related to gamma-Slice Width")
         collapsed: false
 
-        Loader { source: 'SideBarGroups/SubStep4x.qml' }
+        Loader { source: 'SideBarGroups/SubStep4.qml' }
     }
 }
 
