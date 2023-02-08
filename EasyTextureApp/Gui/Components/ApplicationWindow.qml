@@ -259,9 +259,9 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExExplorePage.MainContentPlotView {},
-                    ExExplorePage.MainContentPlotView2 {},
-                    ExExplorePage.MainContentPlotView3 {}
+                    ExExplorePage.MainContentTab1 {},
+                    ExExplorePage.MainContentTab2 {},
+                    ExExplorePage.MainContentTab3 {}
                 ]
             }
 

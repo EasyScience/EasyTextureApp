@@ -1,7 +1,7 @@
 module Step3
 
-MainContentPlotView 1.0 MainContentPlotView.qml
-MainContentPlotView2 1.0 MainContentPlotView2.qml
-MainContentPlotView3 1.0 MainContentPlotView3.qml
+MainContentTab1 1.0 MainContentTab1.qml
+MainContentTab2 1.0 MainContentTab2.qml
+MainContentTab3 1.0 MainContentTab3.qml
 SideBarAdvanced 1.0 SideBarAdvanced.qml
 SideBarBasic 1.0 SideBarBasic.qml
