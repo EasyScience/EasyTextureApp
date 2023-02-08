@@ -1,3 +1,4 @@
 module MainContentComponents
 
-Step1ImagePng 1.0 Step1ImagePng.qml
+Tab1ImagePng 1.0 Tab1ImagePng.qml
+Tab2ImagePng 1.0 Tab2ImagePng.qml

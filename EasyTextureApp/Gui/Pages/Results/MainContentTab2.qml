@@ -5,5 +5,5 @@
 import QtQuick 2.15
 
 Loader {
-    source: 'MainContentComponents/Step1ImagePng.qml'
+    source: 'MainContentComponents/Tab2ImagePng.qml'
 }

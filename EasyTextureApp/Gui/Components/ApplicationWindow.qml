@@ -290,8 +290,8 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExResultsPage.MainContentPlotView {},
-                    ExResultsPage.MainContentPlotView2 {}
+                    ExResultsPage.MainContentTab1 {},
+                    ExResultsPage.MainContentTab2 {}
                 ]
             }
 
