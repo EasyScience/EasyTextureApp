@@ -208,7 +208,7 @@ EaComponents.ApplicationWindow {
                 ]
 
                 items: [
-                    ExRawDataPage.MainContentPlotView {}
+                    ExRawDataPage.MainContentTab {}
                 ]
             }
 
